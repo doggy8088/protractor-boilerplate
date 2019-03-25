@@ -1,0 +1,26 @@
+{
+  "name": "protractor-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "protractor.conf.js",
+  "scripts": {
+    "postinstall": "webdriver-manager update",
+    "test": "protractor protractor.conf.js"
+  },
+  "keywords": [],
+  "author": "Will <doggy.huang@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "~8.9.4",
+    "@types/jasmine": "~2.8.8",
+    "@types/jasminewd2": "~2.0.3",
+    "blue-harvest": "^0.3.1",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "path": "^0.12.7",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.11.0",
+    "typescript": "3.2.4"
+  }
+}
