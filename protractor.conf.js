@@ -16,6 +16,8 @@ exports.config = {
     browserName: 'chrome',
     chromeOptions: {
       args: [
+        // "--headless",
+        // "--incognito",
         "--start-maximized"
       ]
     }
@@ -38,7 +40,14 @@ exports.config = {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.e2e.json')
     });
-    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: false } }));
+
+    jasmine.getEnv().addReporter(new SpecReporter({
+      // https://github.com/bcaudan/jasmine-spec-reporter/blob/master/src/configuration.ts
+      spec: {
+        displayStacktrace: false
+      }
+    }));
+
     /**
      * @type { import("protractor").ProtractorBrowser }
      */
