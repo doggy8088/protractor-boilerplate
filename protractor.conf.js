@@ -17,6 +17,8 @@ exports.config = {
     chromeOptions: {
       args: [
         // "--headless",
+        // "--window-size=1920,1080",
+
         // "--incognito",
         "--start-maximized"
       ]
@@ -26,13 +28,14 @@ exports.config = {
   SELENIUM_PROMISE_MANAGER: false,
 
   directConnect: true,
-  //seleniumServerJar: '../node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar',
+  //seleniumServerJar: 'node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar',
+
   baseUrl: 'http://localhost:4200/',
 
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
-    defaultTimeoutInterval: 100000000,
+    defaultTimeoutInterval: 10000,
     print: function() {}
   },
 
